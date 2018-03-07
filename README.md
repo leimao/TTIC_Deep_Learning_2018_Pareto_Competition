@@ -43,12 +43,12 @@ Numpy
 ├── generated.txt
 ├── generate_hsoftmax.py
 ├── generate.py
+├── LICENSE.md
 ├── main.py
 ├── model.pt
 ├── model.py
-├── __pycache__
-│   ├── data.cpython-35.pyc
-│   └── model.cpython-35.pyc
+├── paretopoint.json
+├── paretopoint.png
 └── README.md
 ```
 
