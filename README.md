@@ -63,6 +63,10 @@ Two-layer hierarchical softmax - Extremely fast
 
 Adagrad Optimizer - Improve perplexity
 
+## Shortcomings of the Model
+
+The two-layer hierarchical softmax is designed to be used for this competition specifically given the corpus size of Penn Treebank dataset is not large and the specialty of "pareto" winner rule. Although my model was trained extremely fast and the first several validation perplexity from the first epochs looks great. In the long-term training, the perplexity would not likely go down. As a result, the validation perplexity after long-term training is not appealing (The state-of-art perplexity of models on Penn TreeBank dataset is around 60-80). This is because I did not cluster the words in rational way. In my model, due to short of time, Word 1 to 100 are simply labeled as class 1, word 101 to 200 are simply labeled as class 2, and so on. However, it does not make sense to have word 1 to 100 be in the same class. This probably limited the long-term training performance of the model. To improve the model in the future, please check the **Future Improvements** below.
+
 ## Model Training
 
 To train the model using my hyperparameter settings:
