@@ -31,13 +31,13 @@ parser.add_argument('--main_module', type=str, default='main.py',
                     help='your python file "main.py"')
 
 # fake identity for pareto point display only
-parser.add_argument('--pseudonym', type=str, default='Depth_Charge',
+parser.add_argument('--pseudonym', type=str, default='Depth_Charge_New',
                     help='pseudonym for display purpose')
 
 # real identity information
 parser.add_argument('--name', type=str, default='Lei_Mao',
                     help='your real name')
-parser.add_argument('--student_id', type=str, default='12172211',
+parser.add_argument('--student_id', type=str, default='XXXXXXXX',
                     help='your student id')
 
 args = parser.parse_args()
