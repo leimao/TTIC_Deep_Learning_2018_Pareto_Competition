@@ -238,5 +238,7 @@ then here and will get smaller than they ca n't change the <unk> <eos> and since
 ## Reference
 
 [1] [On Using Very Large Target Vocabulary for Neural Machine Translation](https://arxiv.org/abs/1412.2007)
+
 [2] [Candidate Sampling Algorithms Reference](https://www.tensorflow.org/extras/candidate_sampling.pdf)
+
 [3] [Classes for Fast Maximum Entropy Training](https://arxiv.org/abs/cs/0108006)
