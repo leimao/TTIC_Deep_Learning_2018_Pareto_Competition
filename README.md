@@ -1,5 +1,5 @@
 
-# Word Language Modeling with Hierarchical Softmax
+# TTIC_Deep_Learning_2018_Pareto_Competition
 
 Lei Mao
 
@@ -8,7 +8,7 @@ University of Chicago
 
 ## Introduction
 
-The 2018 Fundamentals of Deep Learning (TTIC 31230) course at the Toyota Technological Institute at Chicago hosted a "[Pareto](https://en.wikipedia.org/wiki/Pareto_efficiency)" language modeling competition on Penn TreeBank dataset. Every participant submits one pareto training point containing the time ratio of your own model and the benchmark, and the validatoin perplexity. Anyone whose pareto point sits on the pareto curve are considered to be the "winner".
+The 2018 Fundamentals of Deep Learning (TTIC 31230) course at the Toyota Technological Institute at Chicago hosted a "[Pareto](https://en.wikipedia.org/wiki/Pareto_efficiency)" language modeling competition on Penn TreeBank dataset. Every participant submits one pareto training point containing the time ratio of your own model and the benchmark, and the validatoin perplexity. Anyone whose pareto point sits on the pareto curve is considered to be the "winner".
 
 Training language model is often slow if the language corpus is large. This is because ordinary model uses softmax to calculate the probability distribution of the output word. It has to sum up for all the word in order to normalize probability. If the corpus size is extremely large, say one billion, calculating this sum could often dominate the program calculation time. To approximate calculating the output word probability, there are generally two strategies: sampling based softmax and hierarchical softmax. In this project, I implemented sampled softmax and two-layer hierarchical softmax in particular in PyTorch, trying to improve the training efficiency and performance of the training of language model on Penn TreeBank dataset (corpus size: 10,000).
 
@@ -57,6 +57,11 @@ Numpy
 
 The ``main.py``, ``model.py``, and ``model.pt`` were submitted via the script. The ``README.md`` and ``generate_hsoftmax.py`` could be downloaded from my Canvas.
 
+## Key Features of the Model
+
+Two-layer hierarchical softmax - Extremely fast
+
+Adagrad Optimizer - Improve perplexity
 
 ## Model Training
 
