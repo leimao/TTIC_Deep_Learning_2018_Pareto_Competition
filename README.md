@@ -5,9 +5,12 @@ Lei Mao
 
 University of Chicago
 
+
 ## Introduction
 
-Training language model is often slow if the language corpus is large. This is because ordinary model uses softmax to calculate the probability distribution of the output word. It has to sum up for all the word in order to normalize probability. If the corpus size is extremely large, say one billion, calculating this sum could often dominate the program calculation time. To approximate calculating the output word probability, there are generally two strategies: sampling based softmax and hierarchical softmax. In this project, I implemented sampled softmax and two-layer hierarchical softmax in particular in PyTorch, trying to improve the training efficiency and performance of the training of language model on Penn Tree Bank dataset (corpus size: 10,000).
+The 2018 Fundamentals of Deep Learning (TTIC 31230) course at the Toyota Technological Institute at Chicago hosted a "[Pareto](https://en.wikipedia.org/wiki/Pareto_efficiency)" language modeling competition on Penn TreeBank dataset. Every participant submits one pareto training point containing the time ratio of your own model and the benchmark, and the validatoin perplexity. Anyone whose pareto point sits on the pareto curve are considered to be the "winner".
+
+Training language model is often slow if the language corpus is large. This is because ordinary model uses softmax to calculate the probability distribution of the output word. It has to sum up for all the word in order to normalize probability. If the corpus size is extremely large, say one billion, calculating this sum could often dominate the program calculation time. To approximate calculating the output word probability, there are generally two strategies: sampling based softmax and hierarchical softmax. In this project, I implemented sampled softmax and two-layer hierarchical softmax in particular in PyTorch, trying to improve the training efficiency and performance of the training of language model on Penn TreeBank dataset (corpus size: 10,000).
 
 ## Implementation of Sampled Softmax
 
@@ -233,6 +236,10 @@ higher investor sheet <eos> the earnings growth can be <unk> down to $ N million
 to the stock 's market split in two tobacco stations or outsiders after finding a customer indicating you with all
 then here and will get smaller than they ca n't change the <unk> <eos> and since the N <unk> native
 ```
+
+## Future Improvements
+
+Use pre-trained word embeddings and fix the word embeddings without training them. Find the clustering of them, relabel the words to the corresponding cluster label in the corpus and use reasonable number of classes and number of tokens per class in the hierarchical softmax. I bet this will improve both training efficiency and perplexity.
 
 
 ## Reference
