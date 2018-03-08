@@ -250,6 +250,11 @@ then here and will get smaller than they ca n't change the <unk> <eos> and since
 
 Use pre-trained word embeddings and fix the word embeddings without training them. Find the clustering of them, relabel the words to the corresponding cluster label in the corpus and use reasonable number of classes and number of tokens per class in the hierarchical softmax. I bet this will improve both training efficiency and perplexity.
 
+## Competition Outcome
+
+![](paretopoint.png)
+
+The "Depth_Charge" and "Depth_Charge_New" are my pareto points (somehow the script allows me to submit results multiple times...). These two points are on the pareto curve, and are considered to be the "winner" points.
 
 ## Reference
 
