@@ -256,6 +256,11 @@ Use pre-trained word embeddings and fix the word embeddings without training the
 
 The "Depth_Charge" and "Depth_Charge_New" are my pareto points (somehow the script allows me to submit results multiple times...). These two points are on the pareto curve, and are considered to be the "winner" points.
 
+
+<p align="center">
+  <img src="https://github.com/leimao/TTIC_Deep_Learning_2018_Pareto_Competition/blob/master/paretopoint.png" alt="Pareto Points"/>
+</p>
+
 ## Reference
 
 [1] [On Using Very Large Target Vocabulary for Neural Machine Translation](https://arxiv.org/abs/1412.2007)
